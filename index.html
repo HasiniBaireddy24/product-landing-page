@@ -3,131 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Product - Landing Page</title>
+    <title>Product Landing Page</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background-color: #f4f6f8; color: #333; }
-        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
         header {
-            background-color: #007bff;
+            background: #0073e6;
             color: white;
+            padding: 1rem 0;
             text-align: center;
-            padding: 2rem 1rem;
         }
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        header p { font-size: 1.2rem; }
-
-        .cta-buttons {
-            margin-top: 1.5rem;
-        }
-        .cta-buttons button {
-            background-color: white;
-            color: #007bff;
-            border: 2px solid white;
-            padding: 0.7rem 1.5rem;
-            margin: 0 0.5rem;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .cta-buttons button:hover {
-            background-color: #0056b3;
-            color: white;
-            border-color: #0056b3;
-        }
-
-        .features {
-            padding: 3rem 1rem;
-            max-width: 900px;
+        .container {
+            width: 80%;
             margin: auto;
-            text-align: center;
+            padding: 20px;
         }
-        .features h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
+        h1 {
+            margin-bottom: 10px;
         }
-        .features p {
+        p {
             font-size: 1.1rem;
             line-height: 1.6;
         }
-
-        .contact {
-            background-color: white;
-            padding: 2rem 1rem;
+        .cta {
+            margin: 20px 0;
             text-align: center;
         }
-        .contact h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-        .contact form {
-            max-width: 400px;
-            margin: auto;
-            text-align: left;
-        }
-        .contact input,
-        .contact textarea {
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        .contact button {
-            background-color: #007bff;
+        .cta button {
+            background: #0073e6;
             color: white;
+            padding: 10px 20px;
             border: none;
-            padding: 0.8rem 1.2rem;
             font-size: 1rem;
-            border-radius: 5px;
             cursor: pointer;
+            border-radius: 5px;
         }
-        .contact button:hover {
-            background-color: #0056b3;
+        .cta button:hover {
+            background: #005bb5;
         }
-
-        footer {
-            background-color: #333;
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        button[type="submit"] {
+            background: #0073e6;
             color: white;
-            text-align: center;
-            padding: 1rem;
-            font-size: 0.9rem;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button[type="submit"]:hover {
+            background: #005bb5;
+        }
+        .message {
+            margin-top: 20px;
+            padding: 10px;
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+            display: none;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Awesome Product</h1>
-        <p>The easiest way to solve your daily problems effortlessly.</p>
-        <div class="cta-buttons">
+        <h1>My Awesome Product</h1>
+        <p>Innovating your life, one step at a time</p>
+    </header>
+
+    <div class="container">
+        <h2>About the Product</h2>
+        <p>Our product is designed to make your daily life easier, more productive, and more enjoyable. With top-notch features, sleek design, and unbeatable performance, it's the perfect companion for modern living.</p>
+        
+        <div class="cta">
             <button>Buy Now</button>
             <button>Learn More</button>
         </div>
-    </header>
 
-    <section class="features">
-        <h2>Why Choose Us?</h2>
-        <p>
-            Our product is designed to make your life easier, save you time, and give you peace of mind. 
-            With top-notch features, affordable pricing, and exceptional customer support, we are here to
-            make a difference in your everyday tasks.
-        </p>
-    </section>
-
-    <section class="contact">
         <h2>Contact Us</h2>
-        <form>
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
             <button type="submit">Send Message</button>
         </form>
-    </section>
 
-    <footer>
-        &copy; 2025 Awesome Product. All rights reserved.
-    </footer>
+        <div id="formMessage" class="message">✅ Thank you for contacting us! We'll get back to you soon.</div>
+    </div>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const messageBox = document.getElementById('formMessage');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // prevent real submission
+            messageBox.style.display = 'block';
+            form.reset();
+        });
+    </script>
 </body>
 </html>
