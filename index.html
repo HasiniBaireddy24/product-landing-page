@@ -1,31 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Landing Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Product - Landing Page</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
-        h1 { color: #333; }
-        button {
-            background-color: #007bff; color: white; border: none;
-            padding: 10px 20px; font-size: 16px; cursor: pointer;
-            margin: 10px; border-radius: 5px;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background-color: #f4f6f8; color: #333; }
+        
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
         }
-        button:hover { background-color: #0056b3; }
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.2rem; }
+
+        .cta-buttons {
+            margin-top: 1.5rem;
+        }
+        .cta-buttons button {
+            background-color: white;
+            color: #007bff;
+            border: 2px solid white;
+            padding: 0.7rem 1.5rem;
+            margin: 0 0.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .cta-buttons button:hover {
+            background-color: #0056b3;
+            color: white;
+            border-color: #0056b3;
+        }
+
+        .features {
+            padding: 3rem 1rem;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+        .features h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .features p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .contact {
+            background-color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .contact h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .contact form {
+            max-width: 400px;
+            margin: auto;
+            text-align: left;
+        }
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .contact button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.2rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
-<h2>Contact Us</h2>
-<form>
-    <input type="text" name="name" placeholder="Your Name" required><br><br>
-    <input type="email" name="email" placeholder="Your Email" required><br><br>
-    <textarea name="message" placeholder="Your Message" required></textarea><br><br>
-    <button type="submit">Send Message</button>
-</form>
 <body>
-    <h1>Awesome Product</h1>
-    <p>Our product makes your life easier by solving XYZ problem effectively.</p>
-    <button>Buy Now</button>
-    <button>Learn More</button>
+    <header>
+        <h1>Awesome Product</h1>
+        <p>The easiest way to solve your daily problems effortlessly.</p>
+        <div class="cta-buttons">
+            <button>Buy Now</button>
+            <button>Learn More</button>
+        </div>
+    </header>
+
+    <section class="features">
+        <h2>Why Choose Us?</h2>
+        <p>
+            Our product is designed to make your life easier, save you time, and give you peace of mind. 
+            With top-notch features, affordable pricing, and exceptional customer support, we are here to
+            make a difference in your everyday tasks.
+        </p>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2025 Awesome Product. All rights reserved.
+    </footer>
 </body>
 </html>
